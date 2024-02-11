@@ -19,8 +19,8 @@ jobs:
               password: ${{ secrets.REGISTRY_PASSWORD }}
 
          - run: |
-              docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
-              docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
+              docker build . -t bookapiproject.azurecr.io/k8sdemo:${{ github.sha }}
+              docker push bookapiproject.azurecr.io/k8sdemo:${{ github.sha }}
 
          - uses: azure/setup-kubectl@v2.0
 
