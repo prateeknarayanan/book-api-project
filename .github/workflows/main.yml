@@ -28,12 +28,12 @@ jobs:
          - uses: Azure/aks-set-context@v1
            with:
               creds: '${{ secrets.AZURE_CREDENTIALS }}'
-              cluster-name: contoso
-              resource-group: contoso-rg
+              cluster-name: bookapiproject
+              resource-group: cloud-shell-storage-westus
 
          - uses: Azure/k8s-create-secret@v1.1
            with:
-              container-registry-url: contoso.azurecr.io
+              container-registry-url: bookapiproject.azurecr.io
               container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
               container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
               secret-name: demo-k8s-secret
