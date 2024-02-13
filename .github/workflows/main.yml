@@ -42,19 +42,8 @@ jobs:
            with:
               action: deploy
               manifests: |
-                 back-end-deployment.yaml
-                 db-deployment.yaml
-                 front-end-deployment.yaml
-                 nginx-deployment.yaml
-                 back-end-service.yaml
-                 db-service.yaml
-                 front-end-service.yaml
-                 nginx-service.yaml
-                 back-end-claim0-persistentvolumeclaim.yaml
-                 back-end-claim1-persistentvolumeclaim.yaml
-                 db-claim0-persistentvolumeclaim.yaml
-                 front-end-claim0-persistentvolumeclaim.yaml
-                 front-end-claim1-persistentvolumeclaim.yaml
+               manifests/deployment.yml
+               manifests/service.yml
               images: |
                  demo.azurecr.io/k8sdemo:${{ github.sha }}
               imagepullsecrets: |
