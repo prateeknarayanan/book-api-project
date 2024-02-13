@@ -43,6 +43,7 @@ jobs:
               action: deploy
               manifests: |
                manifests/deployment.yml
+               manifests/persistencevolumeclaim.yml
                manifests/service.yml
               images: |
                  demo.azurecr.io/k8sdemo:${{ github.sha }}
