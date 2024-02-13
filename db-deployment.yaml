@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.32.0 (HEAD)
+  labels:
+    io.kompose.service: db
+  name: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.32.0 (HEAD)
+      labels:
+        io.kompose.network/book-api-project-node-network: "true"
+        io.kompose.service: db
+    spec:
+      containers:
+        - env:
+            - name: POSTGRES_DATABASE
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: postgres
+            - name: POSTGRES_USER
+              value: prateeknarayanan
+          image: postgres
+          name: db
+          ports:
+            - containerPort: 5432
+              hostPort: 5432
+              protocol: TCP
+          tty: true
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: db-claim0
+      restartPolicy: Always
+      volumes:
+        - name: db-claim0
+          persistentVolumeClaim:
+            claimName: db-claim0
