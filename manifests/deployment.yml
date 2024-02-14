@@ -28,7 +28,7 @@ spec:
             - npm
             - run
             - start
-          image: bookapiproject.azurecr.io/back-end
+          image: bookapiproject.azurecr.io/k8sdemo/back-end
           name: back-end
           ports:
             - containerPort: 8080
@@ -83,7 +83,7 @@ spec:
               value: postgres
             - name: POSTGRES_USER
               value: prateeknarayanan
-          image: postgres
+          image: bookapiproject.azurecr.io/k8sdemo/postgres
           name: db
           ports:
             - containerPort: 5432
@@ -129,7 +129,7 @@ spec:
             - npm
             - run
             - start
-          image: bookapiproject.azurecr.io/front-end
+          image: bookapiproject.azurecr.io/k8sdemo/front-end
           name: front-end
           ports:
             - containerPort: 3000
@@ -175,7 +175,7 @@ spec:
         io.kompose.service: nginx
     spec:
       containers:
-        - image: nginx
+        - image: bookapiproject.azurecr.io/k8sdemo/nginx
           name: nginx
           ports:
             - containerPort: 80
