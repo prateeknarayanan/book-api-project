@@ -28,7 +28,7 @@ spec:
             - npm
             - run
             - start
-          image: back-end
+          image: bookapiproject.azurecr.io/back-end
           name: back-end
           ports:
             - containerPort: 8080
@@ -129,7 +129,7 @@ spec:
             - npm
             - run
             - start
-          image: front-end
+          image: bookapiproject.azurecr.io/front-end
           name: front-end
           ports:
             - containerPort: 3000
