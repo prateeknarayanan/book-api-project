@@ -46,6 +46,6 @@ jobs:
                manifests/persistencevolumeclaim.yml
                manifests/service.yml
               images: |
-                 demo.azurecr.io/k8sdemo:${{ github.sha }}
+                 bookapiproject.azurecr.io/k8sdemo:${{ github.sha }}
               imagepullsecrets: |
                  demo-k8s-secret
