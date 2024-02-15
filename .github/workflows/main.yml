@@ -47,5 +47,3 @@ jobs:
                manifests/service.yml
               images: |
                  bookapiproject.azurecr.io/k8sdemo:${{ github.sha }}
-              imagepullsecrets: |
-                 demo-k8s-secret
