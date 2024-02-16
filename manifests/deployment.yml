@@ -32,6 +32,7 @@ spec:
             - containerPort: 8080
               hostPort: 8080
               protocol: TCP
+          command: ['npm', 'run', 'start']
           tty: true
           volumeMounts:
             - mountPath: /usr/src/app
@@ -133,6 +134,7 @@ spec:
             - containerPort: 3000
               hostPort: 3000
               protocol: TCP
+          command: ['npm', 'run', 'start']
           tty: true
           volumeMounts:
             - mountPath: /usr/src/app
