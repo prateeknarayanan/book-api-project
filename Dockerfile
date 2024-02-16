@@ -2,14 +2,14 @@ FROM node:alpine
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install
-CMD ["npm", "run", "start"]
+ENTRYPOINT ["npm", "run", "start"]
 EXPOSE 8080
 
 FROM node:alpine
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install
-CMD ["npm", "run", "start"]
+ENTRYPOINT ["npm", "run", "start"]
 EXPOSE 3000
 
 FROM nginx
