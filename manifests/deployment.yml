@@ -26,6 +26,10 @@ spec:
         app: myApp
     spec:
       containers:
+          args:
+            - npm
+            - run
+            - start
           image: bookapiproject.azurecr.io/k8sdemo
           name: back-end
           ports:
@@ -127,6 +131,10 @@ spec:
         app: myApp
     spec:
       containers:
+          args:
+            - npm
+            - run
+            - start
           image: bookapiproject.azurecr.io/k8sdemo
           name: front-end
           ports:
