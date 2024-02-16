@@ -1,11 +1,11 @@
-FROM node:alpine
+FROM node:alpine AS back-end
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install
 CMD ["npm", "run", "start"]
 EXPOSE 8080
 
-FROM node:alpine
+FROM node:alpine AS front-end
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install
