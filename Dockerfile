@@ -13,4 +13,4 @@ CMD ["npm", "run", "start"]
 EXPOSE 3000
 
 FROM nginx
-COPY --from=front-end ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
