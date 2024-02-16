@@ -26,7 +26,7 @@ spec:
         app: myApp
     spec:
       containers:
-        - args:
+        - command:
             - npm
             - run
             - start
@@ -131,7 +131,7 @@ spec:
         app: myApp
     spec:
       containers:
-        - args:
+        - command:
             - npm
             - run
             - start
