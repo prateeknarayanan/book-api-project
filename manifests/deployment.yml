@@ -12,7 +12,6 @@ spec:
   selector:
     matchLabels:
       io.kompose.service: back-end
-      app: myApp
   strategy:
     type: Recreate
   template:
@@ -23,10 +22,9 @@ spec:
       labels:
         io.kompose.network/book-api-project-node-network: "true"
         io.kompose.service: back-end
-        app: myApp
     spec:
       containers:
-          args:
+        - args:
             - npm
             - run
             - start
@@ -51,6 +49,7 @@ spec:
         - name: back-end-claim1
           persistentVolumeClaim:
             claimName: back-end-claim1
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -131,7 +130,7 @@ spec:
         app: myApp
     spec:
       containers:
-          args:
+        - args:
             - npm
             - run
             - start
