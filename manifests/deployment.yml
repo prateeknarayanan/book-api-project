@@ -89,14 +89,7 @@ spec:
               hostPort: 5432
               protocol: TCP
           tty: true
-          volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: db-claim0
       restartPolicy: Always
-      volumes:
-        - name: db-claim0
-          persistentVolumeClaim:
-            claimName: db-claim0
 ---
 apiVersion: apps/v1
 kind: Deployment
