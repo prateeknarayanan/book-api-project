@@ -174,7 +174,8 @@ spec:
         app: myApp
     spec:
       containers:
-        - name: nginx
+        - image: nginx
+          name: nginx
           ports:
             - containerPort: 80
               hostPort: 8000
