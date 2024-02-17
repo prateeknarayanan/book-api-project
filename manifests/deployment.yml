@@ -82,7 +82,7 @@ spec:
               value: postgres
             - name: POSTGRES_USER
               value: prateeknarayanan
-          image: bookapiproject.azurecr.io/k8sdemo
+          image: postgres
           name: db
           ports:
             - containerPort: 5432
@@ -174,8 +174,7 @@ spec:
         app: myApp
     spec:
       containers:
-        - image: bookapiproject.azurecr.io/k8sdemo
-          name: nginx
+        - name: nginx
           ports:
             - containerPort: 80
               hostPort: 8000
