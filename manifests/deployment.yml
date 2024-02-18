@@ -32,20 +32,7 @@ spec:
               protocol: TCP
           command: ["npm", "run", "start"]
           tty: true
-          volumeMounts:
-            - mountPath: /usr/src/app
-              name: back-end-claim0
-            - mountPath: /usr/src/app/node_modules
-              name: back-end-claim1
-          workingDir: /usr/src/app
       restartPolicy: Always
-      volumes:
-        - name: back-end-claim0
-          persistentVolumeClaim:
-            claimName: back-end-claim0
-        - name: back-end-claim1
-          persistentVolumeClaim:
-            claimName: back-end-claim1
 
 ---
 apiVersion: apps/v1
@@ -128,20 +115,7 @@ spec:
               protocol: TCP
           command: ["npm", "run", "start"]
           tty: true
-          volumeMounts:
-            - mountPath: /usr/src/app
-              name: front-end-claim0
-            - mountPath: /usr/src/app/node_modules
-              name: front-end-claim1
-          workingDir: /usr/src/app
       restartPolicy: Always
-      volumes:
-        - name: front-end-claim0
-          persistentVolumeClaim:
-            claimName: front-end-claim0
-        - name: front-end-claim1
-          persistentVolumeClaim:
-            claimName: front-end-claim1
 ---
 apiVersion: apps/v1
 kind: Deployment

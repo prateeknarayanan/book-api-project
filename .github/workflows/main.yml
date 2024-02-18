@@ -43,7 +43,6 @@ jobs:
               action: deploy
               manifests: |
                manifests/deployment.yml
-               manifests/persistencevolumeclaim.yml
                manifests/service.yml
               images: |
                  bookapiproject.azurecr.io/k8sdemo:latest
