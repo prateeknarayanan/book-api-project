@@ -45,6 +45,7 @@ jobs:
                manifests/deployment.yml
                manifests/service.yml
               images: |
-                 bookapiproject.azurecr.io/k8sdemo:latest
+                 bookapiproject.azurecr.io/k8sdemo:back-end
+                 bookapiproject.azurecr.io/k8sdemo:front-end
               imagepullsecrets: |
                  demo-k8s-secret

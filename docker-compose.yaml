@@ -5,7 +5,7 @@ services:
   back-end:
     build: 
       context: node
-    image: bookapiproject.azurecr.io/k8sdemo
+    image: bookapiproject.azurecr.io/k8sdemo:back-end
     container_name: back-end
     working_dir: /usr/src/app
     networks: 
@@ -23,7 +23,7 @@ services:
   front-end:
     build: 
       context: react
-    image: bookapiproject.azurecr.io/k8sdemo
+    image: bookapiproject.azurecr.io/k8sdemo:front-end
     container_name: front-end
     working_dir: /usr/src/app
     networks: 

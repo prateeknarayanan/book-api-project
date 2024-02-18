@@ -24,7 +24,7 @@ spec:
         io.kompose.service: back-end
     spec:
       containers:
-        - image: bookapiproject.azurecr.io/k8sdemo
+        - image: bookapiproject.azurecr.io/k8sdemo:back-end
           name: back-end
           ports:
             - containerPort: 8080
@@ -107,7 +107,7 @@ spec:
         app: myApp
     spec:
       containers:
-        - image: bookapiproject.azurecr.io/k8sdemo
+        - image: bookapiproject.azurecr.io/k8sdemo:front-end
           name: front-end
           ports:
             - containerPort: 3000
