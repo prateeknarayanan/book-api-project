@@ -65,6 +65,7 @@ metadata:
     io.kompose.service: nginx
   name: nginx
 spec:
+  type: LoadBalancer
   ports:
     - name: "8000"
       port: 8000
