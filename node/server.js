@@ -14,7 +14,7 @@ db.sequelize.sync()
   });
 
 var corsOptions = {
-  origin: "http://20.228.85.129:3000/"
+  origin: "http://20.228.85.129:3000"
 };
 
 app.use(cors(corsOptions));
