@@ -79,6 +79,7 @@ spec:
           tty: true
       restartPolicy: Always
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -117,6 +118,7 @@ spec:
           tty: true
       restartPolicy: Always
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
