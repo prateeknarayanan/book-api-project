@@ -8,6 +8,7 @@ metadata:
     io.kompose.service: back-end
   name: back-end
 spec:
+  type: LoadBalancer
   ports:
     - name: "8080"
       port: 8080
@@ -46,6 +47,7 @@ metadata:
     io.kompose.service: front-end
   name: front-end
 spec:
+  type: LoadBalancer
   ports:
     - name: "3000"
       port: 3000
